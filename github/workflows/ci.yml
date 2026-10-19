@@ -20,10 +20,10 @@ jobs:
           dotnet-version: 8.0.x
 
       - name: Restore
-        run: dotnet restore do-an-epu.sln
+        run: dotnet restore do-an-epu.csproj
 
       - name: Build
-        run: dotnet build do-an-epu.sln --configuration Release --no-restore
+        run: dotnet build do-an-epu.csproj --configuration Release --no-restore
 
       - name: Test
-        run: dotnet test do-an-epu.sln --configuration Release --no-build
+        run: dotnet test do-an-epu.csproj --configuration Release --no-build
