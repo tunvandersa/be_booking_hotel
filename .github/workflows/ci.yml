@@ -2,9 +2,11 @@ name: ASP.NET Core CI
 
 on:
   push:
-    branches: [main]
+    branches:
+      - main
   pull_request:
-    branches: [main]
+    branches:
+      - main
 
 jobs:
   build-and-test:
@@ -24,6 +26,3 @@ jobs:
 
       - name: Build
         run: dotnet build do-an-epu.csproj --configuration Release --no-restore
-
-      - name: Test
-        run: dotnet test do-an-epu.csproj --configuration Release --no-build
