@@ -1,0 +1,8 @@
+ - name: Restore
+        run: dotnet restore do-an-epu.csproj
+
+      - name: Build
+        run: dotnet build do-an-epu.csproj --configuration Release --no-restore
+
+      - name: Test
+        run: dotnet test do-an-epu.csproj --configuration Release --no-build
